@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: cursive;
+            padding: 0;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           background-color: slateblue;
+        }
+     .container{
+        /* border: solid red 2px; */
+        width: 300px;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+       
+     }
+     .month-name{
+        background-color: orangered;
+        padding: 20px;
+        margin: 0;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+     }
+     .day-name{
+        color: darkgray;
+        font-size: 20px;
+     }
+     .daynumber{
+        /* padding: 60px; */
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0;
+     }
+     .year{
+        color: darkgray;
+        font-size: 20px;
+        margin: 20px 0;
+        
+     }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p class="month-name" id="month-name">December</p>
+    <p class="day-name" id="day-name">Monday</p>
+    <p class="daynumber" id="day-number">20</p>
+    <p class="year" id="year">2023</p>
+
+    </div>
+
+    <script>
+
+   const monthName = document.querySelector("#month-name");
+   const dayName = document.querySelector("#day-name");
+   const dayNum = document.querySelector("#day-number");
+   const year = document.querySelector("#year");
+   
+   const date = new Date();
+   const month = date.getMonth();
+   monthName.innerHTML = date.toLocaleString("en" , {
+      month :"long"
+   });
+
+   dayName.innerHTML = date.toLocaleString("en" ,{
+     weekday: "long" 
+   });
+
+   dayNum.innerHTML = date.getDate();
+   
+   year.innerHTML = date.getFullYear();
+
+   
+
+    </script>
+
+     
+</body>
+</html>
