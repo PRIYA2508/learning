@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+    <style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body{
+    background-color: black;
+    width: 100%;
+    height: 100vh;  
+    overflow: hidden;
+ }
+ span{
+    background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: animate 6s linear;
+ } 
+ @keyframes animate {
+   0%{
+      transform: translate(-50% , -50%);
+      opacity: 1;
+      filter: hue-rotate(0);
+   }
+   100%{
+      transform: translate(-50% , -5000%);
+      opacity: 0;
+      filter: hue-rotate(720deg);
+   }
+   
+ }
+    </style>
+</head>
+<body>
+
+<script>
+const bodyEl = document.querySelector("body");
+bodyEl.addEventListener("mousemove",(e)=>{
+   const xpos = e.offsetX;
+   const ypos = e.offsetY;
+   console.log('hello');
+   let spanEl = document.createElement("span");
+   spanEl.innerHTML = "love";
+   spanEl.style.left = xpos + "px";
+   spanEl.style.top = ypos + "px";
+   const size = Math.random()*100;
+   spanEl.style.width = size+"px";
+   spanEl.style.height = size+"px";
+   spanEl.style.lineHeight = size + "px";
+   spanEl.style.textAlign = "center";
+   bodyEl.appendChild(spanEl);
+   setTimeout(()=>{
+   spanEl.remove();
+   },3000)
+   
+});
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle color</title>
+    <style>
+        body{
+            background-color: grey;
+
+        }
+      div{
+        height: 140px;
+        width: 270px;
+        display: block;
+        border: 2px solid black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60% , -60%);
+      }
+    </style>
+</head>
+<body>
+    <div> </div>
+    <script>
+        // const mouse = document.querySelector("div");
+        // mouse.addEventListener("mousemove",function(e){
+        //     let rectlocation = mouse.getBoundingClientRect();
+        //     console.log(rectlocation);
+        // })
+        let posX = 0;
+        console.log(`"first" ${posX}`);
+        let speedX = 1;
+        let box = document.querySelector("div")
+        box.addEventListener("mousemove", function(e){
+            
+            function movebox(){
+                console.log(posX);
+                posX +=speedX;
+               console.log(`"hey" ${posX}`);
+                box.style.left = posX + "px";
+                if (posX <= 0 || posX >= window.innerWidth - box.offsetWidth) {
+            speedX = -speedX;
+        }     
+            }
+            let moveboxInterval= setInterval(movebox, 1);
+            setTimeout(()=>{
+            clearInterval(moveboxInterval);
+            },2000)
+});
+
+
+        
+    </script>
+</body>
+</html>

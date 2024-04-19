@@ -1,0 +1,64 @@
+/* general styles */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center; 
+    background-color: yellowgreen;  
+}
+.container{
+    width: 550px;
+    height: 450px;
+} 
+.header{
+    font-size: 1rem;
+    color: #fff;
+    border: #fff solid 2px;
+    margin-bottom: 130px;
+    border-radius: 8px;
+    padding: 5px;
+    width: 80%; 
+}
+.main-content{
+    border: black solid 2px;
+    width: 450px;
+    height: 200px;
+    padding: 50px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.main-content .text-area{
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+.main-content .person{
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px; 
+    text-transform: uppercase;
+
+}
+.button-area{
+margin-top: 5px;
+text-align: center;
+border-radius: 5px;
+}
+#newQuoteButton{
+    background-color: black;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 5px ; 
+}

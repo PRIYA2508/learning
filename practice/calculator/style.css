@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(140, 214, 165);
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container{
+background-color: rgba(0, 0, 0, 0.575);
+padding: 20px;
+border-radius: 1rem;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+}
+.container input{
+    width: 100%;
+    border: none;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.575), 3px 2px 1px rgba(0, 0,0,0.5);
+    margin: 10px;
+    padding: 9px;
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: right;
+    margin-left: -5px;
+    cursor: pointer;
+   
+    
+
+}
+button{
+    width: 50px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: -8px -8px 15px #202020a4 , 3px 2px 1px rgba(0, 0,0,0.5);
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+}
+.equal{
+    width: 130px;
+}

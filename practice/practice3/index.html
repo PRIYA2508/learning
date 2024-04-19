@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: solid blue 2px;
+            margin: 5px;
+            background-color: blueviolet;
+            color: antiquewhite;
+            text-align: center;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <h2 >Hello JavaScript</h2>
+   <h3 class="nji">hji</h3>
+
+    <div class="box">first</div>
+    <div class="box">second</div>
+    <div class="box">third</div> -->
+    <!-- <p class="class">this is new line</p> 
+     <a href="https://google.com">google1</a>
+    <a href="https://google.com">google2</a>
+    <a href="https://youtube.com">google3</a> -->
+
+    <article id="wrapped">
+        <p>para1<span>span1</span></p>
+        <p>para2<span>span 2</span></p>
+        <p>para3<span>span2</span></p>
+    </article>
+
+
+        
+
+    <script>
+        // let h2 = document.querySelector( "h2");  //select the first h2 element in the document
+        // console.dir(h2.innerText);                       //output: HTMLHeadingElement {...}
+        // h2.innerText = h2.innerText + " from apna college student";
+
+        // let divs = document.querySelectorAll( ".box" );   //select all elements with class box
+        // console.log(divs);                               //NodeList(3)
+        // divs[0].innerHTML = "<div style='color:red; background-color:yellow;'>hi</div>"  ;
+        // divs[1].innerText = "my name is";
+        // divs[2].innerText = "priya sharma";
+
+        // let para = document.querySelector(".class")      //select the first element with class class
+        // console.log(para.setAttribute("class" , "new"));//output : [object HTMLParagraphElement]
+
+        // let head = document.querySelector(".nji");
+        // console.log(head.setAttribute("nji" , "higu"));
+
+
+
+        // ****************************************
+
+
+
+    // function color(){
+    // let content = document.querySelector('.class')
+    // content.style.color = 'salmon'
+    // }
+    // let content = document.querySelector('.class') 
+    // content.addEventListener('click' , color);
+
+    // content.removeEventListener('click',color);
+
+    // let content = document.querySelector('.class')
+    // content.addEventListener('click' , function(hagu){
+    //   console.log(hagu);
+    //   alert("you clicked me");
+    // });
+
+    // let link = document.querySelectorAll( 'a' );
+    // let thridlink =  link[2];
+    // thridlink.addEventListener('click',function(event){
+    //     event.preventDefault();
+    //     alert("this is prevent default click event");
+    //     console.log('hurrrrrrrrrrrr')
+    // });
+    
+    //many event listner on same thing
+
+    // let mydiv = document.createElement('div');
+    // function parastatus(event){
+    //      console.log('Para', event.target.textContent)
+    //     }
+    //     mydiv.addEventListener('click',parastatus );
+    
+    
+    // for(let i =0 ; i<=100 ; i++){
+    //     let para = document.createElement('p');
+    //     para.textContent ="This is paragraph number "+i;
+
+    //     //event listner on each  paragrafhe
+    //     mydiv.appendChild(para); 
+    // }
+    // document.body.appendChild(mydiv)
+     
+    //specific filter element  from collection of elements[NODENAME]
+
+    let element =document.querySelector('#wrapped');
+    element.addEventListener('click',function (eve) {
+        if(event.target.nodeName === 'SPAN ' ){
+            console.log('span pr click kiya hai '+ event.target.textContent);
+        }
+        
+    });
+
+
+    </script>
+</body> 
+</html>

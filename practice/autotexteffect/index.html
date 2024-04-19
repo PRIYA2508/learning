@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: brown;
+            font-family: cursive;
+        }
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -40%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I am a Youtuber</h1>
+    </div> 
+
+    <script>
+    const containerEl = document.querySelector(".container");
+    
+    const carrer = ["Youtuber","Devloper","Freelancer","Instructor"];
+
+    let carrerIndex = 0;
+    let charIndex = 0 ;
+    update();
+   
+    function update(){
+        charIndex++;
+        containerEl.innerHTML = `<h1>I am ${carrer[carrerIndex].slice(0,1) === "I" ? "an" : "a"} ${carrer[carrerIndex].slice(0,charIndex)} </h1>`;
+        
+        if(charIndex === carrer[carrerIndex].length){
+            carrerIndex++;
+            charIndex = 0;
+        }
+        if(carrerIndex === carrer.length){
+            carrerIndex = 0
+        }
+        
+        setTimeout(update,400)
+    }
+   
+    </script>
+</body>
+</html>

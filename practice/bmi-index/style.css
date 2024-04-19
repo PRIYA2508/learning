@@ -1,0 +1,30 @@
+body{
+    background-color: #797978;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container {
+
+    width: 400px;
+    height: 450px;
+    border: solid white 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+  }
+  #height,
+  #weight {
+    width: 150px;
+    height: 25px;
+  }
+  
+  #weight-guide {
+    text-align: center;
+  }
+ 
